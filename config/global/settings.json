@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "stack": "claude-memory-stack",
+    "version": "1.0.1",
+    "author": "Rajat Tanwar"
+  },
+  "cleanupPeriodDays": 99999,
+  "permissions": {
+    "allow": [
+      "Bash(venv/bin/python:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|Bash|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/no-leak.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/auto-index-incremental.sh"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/memory-architecture-check.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/auto-index.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/ruflo-session-start.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/ruflo-session-end.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/reflect-reminder.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/ingest-conversation.sh"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/ingest-conversation.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  },
+  "voiceEnabled": true,
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline.sh"
+  }
+}

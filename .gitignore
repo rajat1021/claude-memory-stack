@@ -1,0 +1,10 @@
+.DS_Store
+*.bak
+.env
+*.key
+*.pem
+credentials.json
+node_modules/
+__pycache__/
+*.pyc
+.claude-memory-stack

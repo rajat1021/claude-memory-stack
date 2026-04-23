@@ -1,0 +1,24 @@
+{
+  "_meta": {"stack": "claude-memory-stack", "version": "1.0.0"},
+  "mcpServers": {
+    "codebase-memory-mcp": {
+      "command": "__CMS_CODEBASE_MEMORY_BIN__",
+      "args": ["--project-dir", "."]
+    },
+    "code-review-graph": {
+      "command": "code-review-graph",
+      "args": ["mcp"]
+    },
+    "ruvector-mcp": {
+      "command": "npx",
+      "args": ["ruvector", "mcp-server"],
+      "env": {
+        "PGHOST": "localhost",
+        "PGPORT": "5433",
+        "PGDATABASE": "claude_flow",
+        "PGUSER": "claude",
+        "PGPASSWORD": "__CMS_DB_PASSWORD__"
+      }
+    }
+  }
+}

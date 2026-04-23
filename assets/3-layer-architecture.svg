@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 750" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="ds" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="l1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00b894;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00cec9;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="l2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0984e3;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#74b9ff;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="l3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6c5ce7;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#a29bfe;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="orchGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fdcb6e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff7675;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d63031;stop-opacity:1"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#636e72"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00b894"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0984e3"/>
+    </marker>
+    <marker id="arrPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6c5ce7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="750" rx="16" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#2d3436">3-Layer Memory Architecture</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#636e72">Right memory, right time, right cost</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- Claude Code box at top         -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="330" y="88" width="240" height="48" rx="10" fill="#2d3436" filter="url(#ds)"/>
+  <text x="450" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="white">Claude Code Session</text>
+
+  <!-- Arrow from Claude to L1 -->
+  <line x1="450" y1="136" x2="450" y2="162" stroke="#00b894" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <text x="520" y="155" font-size="11" fill="#00b894" font-weight="600" font-style="italic">always loaded</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LAYER 1: Always-Loaded         -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="100" y="168" width="700" height="110" rx="14" fill="#ffffff" stroke="#00b894" stroke-width="2.5" filter="url(#ds)"/>
+
+  <!-- L1 header bar -->
+  <rect x="100" y="168" width="700" height="36" rx="14" fill="url(#l1Grad)"/>
+  <rect x="100" y="190" width="700" height="14" fill="url(#l1Grad)"/>
+  <text x="140" y="193" font-size="15" font-weight="700" fill="white">L1</text>
+  <text x="170" y="193" font-size="15" font-weight="600" fill="white">Always-Loaded Context</text>
+  <text x="720" y="193" font-size="13" font-weight="700" fill="white" text-anchor="end">FREE</text>
+
+  <!-- L1 content blocks -->
+  <rect x="125" y="215" width="130" height="46" rx="8" fill="#e8f8f5" stroke="#00b894" stroke-width="1"/>
+  <text x="190" y="235" text-anchor="middle" font-size="11" font-weight="600" fill="#00b894">CLAUDE.md</text>
+  <text x="190" y="251" text-anchor="middle" font-size="9" fill="#636e72">Prefs + protocols</text>
+
+  <rect x="270" y="215" width="130" height="46" rx="8" fill="#e8f8f5" stroke="#00b894" stroke-width="1"/>
+  <text x="335" y="235" text-anchor="middle" font-size="11" font-weight="600" fill="#00b894">memory-bank/</text>
+  <text x="335" y="251" text-anchor="middle" font-size="9" fill="#636e72">Decisions, patterns</text>
+
+  <rect x="415" y="215" width="130" height="46" rx="8" fill="#e8f8f5" stroke="#00b894" stroke-width="1"/>
+  <text x="480" y="235" text-anchor="middle" font-size="11" font-weight="600" fill="#00b894">tech-tips/</text>
+  <text x="480" y="251" text-anchor="middle" font-size="9" fill="#636e72">Cross-project gotchas</text>
+
+  <rect x="560" y="215" width="215" height="46" rx="8" fill="#e8f8f5" stroke="#00b894" stroke-width="1"/>
+  <text x="668" y="235" text-anchor="middle" font-size="11" font-weight="600" fill="#00b894">Per-Project Isolation</text>
+  <text x="668" y="251" text-anchor="middle" font-size="9" fill="#636e72">Each project = own memory</text>
+
+  <!-- Arrow from L1 to L2 -->
+  <line x1="450" y1="278" x2="450" y2="308" stroke="#0984e3" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="535" y="298" font-size="11" fill="#636e72" font-style="italic">not found? auto-query</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LAYER 2: Code Intelligence     -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="100" y="314" width="700" height="120" rx="14" fill="#ffffff" stroke="#0984e3" stroke-width="2.5" filter="url(#ds)"/>
+
+  <!-- L2 header bar -->
+  <rect x="100" y="314" width="700" height="36" rx="14" fill="url(#l2Grad)"/>
+  <rect x="100" y="336" width="700" height="14" fill="url(#l2Grad)"/>
+  <text x="140" y="339" font-size="15" font-weight="700" fill="white">L2</text>
+  <text x="170" y="339" font-size="15" font-weight="600" fill="white">Code Intelligence Pipeline</text>
+  <text x="720" y="339" font-size="13" font-weight="700" fill="white" text-anchor="end">AUTO</text>
+
+  <!-- Stage 1: code-review-graph -->
+  <rect x="125" y="362" width="250" height="55" rx="8" fill="#ebf5fb" stroke="#0984e3" stroke-width="1"/>
+  <text x="250" y="382" text-anchor="middle" font-size="12" font-weight="700" fill="#0984e3">code-review-graph</text>
+  <text x="250" y="398" text-anchor="middle" font-size="10" fill="#636e72">Blast-radius scoping</text>
+  <text x="250" y="410" text-anchor="middle" font-size="9" fill="#636e72">22 MCP tools · 19 languages</text>
+
+  <!-- Arrow between stages -->
+  <line x1="385" y1="389" x2="425" y2="389" stroke="#0984e3" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="405" y="380" text-anchor="middle" font-size="9" fill="#0984e3">scope</text>
+
+  <!-- Stage 2: codebase-memory-mcp -->
+  <rect x="435" y="362" width="250" height="55" rx="8" fill="#ebf5fb" stroke="#0984e3" stroke-width="1"/>
+  <text x="560" y="382" text-anchor="middle" font-size="12" font-weight="700" fill="#0984e3">codebase-memory-mcp</text>
+  <text x="560" y="398" text-anchor="middle" font-size="10" fill="#636e72">Targeted code retrieval</text>
+  <text x="560" y="410" text-anchor="middle" font-size="9" fill="#636e72">14 MCP tools · 66 languages</text>
+
+  <!-- Cost label -->
+  <rect x="700" y="370" width="80" height="28" rx="6" fill="#ebf5fb" stroke="#0984e3" stroke-width="1"/>
+  <text x="740" y="389" text-anchor="middle" font-size="10" font-weight="600" fill="#0984e3">~2,300</text>
+  <text x="740" y="400" text-anchor="middle" font-size="8" fill="#636e72">tokens</text>
+
+  <!-- Arrow from L2 to L3 -->
+  <line x1="450" y1="434" x2="450" y2="464" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrPurple)"/>
+  <text x="545" y="454" font-size="11" fill="#636e72" font-style="italic">not found? ask user</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LAYER 3: Knowledge + Learning  -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="100" y="470" width="700" height="130" rx="14" fill="#ffffff" stroke="#6c5ce7" stroke-width="2.5" filter="url(#ds)"/>
+
+  <!-- L3 header bar -->
+  <rect x="100" y="470" width="700" height="36" rx="14" fill="url(#l3Grad)"/>
+  <rect x="100" y="492" width="700" height="14" fill="url(#l3Grad)"/>
+  <text x="140" y="495" font-size="15" font-weight="700" fill="white">L3</text>
+  <text x="170" y="495" font-size="15" font-weight="600" fill="white">Knowledge + Learning</text>
+  <text x="720" y="495" font-size="13" font-weight="700" fill="white" text-anchor="end">ON-DEMAND</text>
+
+  <!-- RuVector box -->
+  <rect x="125" y="518" width="170" height="65" rx="8" fill="#f3f0ff" stroke="#6c5ce7" stroke-width="1"/>
+  <text x="210" y="538" text-anchor="middle" font-size="12" font-weight="700" fill="#6c5ce7">RuVector PostgreSQL</text>
+  <text x="210" y="554" text-anchor="middle" font-size="9" fill="#636e72">trade_insights (1,605)</text>
+  <text x="210" y="566" text-anchor="middle" font-size="9" fill="#636e72">vault_chunks (1,804)</text>
+  <text x="210" y="578" text-anchor="middle" font-size="9" fill="#636e72">jarvis_obs (7,417)</text>
+
+  <!-- ReasoningBank box -->
+  <rect x="310" y="518" width="170" height="65" rx="8" fill="#f3f0ff" stroke="#6c5ce7" stroke-width="1"/>
+  <text x="395" y="538" text-anchor="middle" font-size="12" font-weight="700" fill="#6c5ce7">ReasoningBank</text>
+  <text x="395" y="555" text-anchor="middle" font-size="9" fill="#636e72">RETRIEVE → JUDGE</text>
+  <text x="395" y="567" text-anchor="middle" font-size="9" fill="#636e72">→ DISTILL → ROUTE</text>
+  <text x="395" y="579" text-anchor="middle" font-size="9" fill="#636e72">Self-learning loop</text>
+
+  <!-- Pattern tracking box -->
+  <rect x="495" y="518" width="140" height="65" rx="8" fill="#f3f0ff" stroke="#6c5ce7" stroke-width="1"/>
+  <text x="565" y="538" text-anchor="middle" font-size="12" font-weight="700" fill="#6c5ce7">Patterns</text>
+  <text x="565" y="555" text-anchor="middle" font-size="9" fill="#636e72">Confidence scores</text>
+  <text x="565" y="567" text-anchor="middle" font-size="9" fill="#636e72">Success / failure</text>
+  <text x="565" y="579" text-anchor="middle" font-size="9" fill="#636e72">Graph operations</text>
+
+  <!-- Agent routing box -->
+  <rect x="650" y="518" width="130" height="65" rx="8" fill="#f3f0ff" stroke="#6c5ce7" stroke-width="1"/>
+  <text x="715" y="538" text-anchor="middle" font-size="12" font-weight="700" fill="#6c5ce7">Routing</text>
+  <text x="715" y="555" text-anchor="middle" font-size="9" fill="#636e72">Q-Learning</text>
+  <text x="715" y="567" text-anchor="middle" font-size="9" fill="#636e72">Opus / Sonnet / Haiku</text>
+  <text x="715" y="579" text-anchor="middle" font-size="9" fill="#636e72">Auto model select</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- Bottom: Orchestration + Security -->
+  <!-- ═══════════════════════════════ -->
+
+  <!-- Ruflo Orchestration -->
+  <rect x="100" y="620" width="340" height="48" rx="10" fill="url(#orchGrad)" filter="url(#ds)"/>
+  <text x="270" y="640" text-anchor="middle" font-size="13" font-weight="700" fill="#2d3436">Ruflo Orchestration</text>
+  <text x="270" y="657" text-anchor="middle" font-size="10" fill="#2d3436">Swarm coordination · Queen/Worker · Multi-model</text>
+
+  <!-- Superpowers -->
+  <rect x="460" y="620" width="340" height="48" rx="10" fill="#dfe6e9" filter="url(#ds)"/>
+  <text x="630" y="640" text-anchor="middle" font-size="13" font-weight="700" fill="#2d3436">Superpowers (8 Skills)</text>
+  <text x="630" y="657" text-anchor="middle" font-size="10" fill="#636e72">TDD · Debugging · Verification · Code Review</text>
+
+  <!-- Security bar -->
+  <rect x="100" y="682" width="700" height="35" rx="10" fill="url(#secGrad)" filter="url(#ds)"/>
+  <text x="450" y="705" text-anchor="middle" font-size="13" font-weight="700" fill="white">Security: no-leak hook blocks .env, .key, .pem, credentials</text>
+
+  <!-- Bottom stats -->
+  <text x="225" y="742" text-anchor="middle" font-size="12" fill="#00b894" font-weight="700">L1: 0 tokens</text>
+  <text x="450" y="742" text-anchor="middle" font-size="12" fill="#0984e3" font-weight="700">L2: ~2,300 tokens</text>
+  <text x="675" y="742" text-anchor="middle" font-size="12" fill="#6c5ce7" font-weight="700">L3: only when approved</text>
+</svg>

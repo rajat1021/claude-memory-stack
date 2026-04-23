@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────
+# claude-memory-stack v1.0.0 | MIT License
+# Author: Rajat Tanwar (@rajat1021)
+# https://github.com/rajat1021/claude-memory-stack
+# ─────────────────────────────────────────────────
+#
+# RuVector PostgreSQL — L3 Knowledge + Learning DB
+# Auto-starts on laptop boot via restart: always
+
+services:
+  ruvector-postgres:
+    image: pgvector/pgvector:pg17
+    container_name: claude-memory-stack-db
+    restart: always
+    environment:
+      POSTGRES_USER: claude
+      POSTGRES_PASSWORD: ${CMS_DB_PASSWORD:-claude-memory-stack}
+      POSTGRES_DB: claude_flow
+    ports:
+      - "5433:5432"
+    volumes:
+      - cms_postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/01-init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U claude -d claude_flow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    command: >
+      postgres
+      -c work_mem=256MB
+      -c maintenance_work_mem=512MB
+      -c shared_buffers=256MB
+
+volumes:
+  cms_postgres_data:

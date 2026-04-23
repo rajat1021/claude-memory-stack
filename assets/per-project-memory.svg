@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="shadow2" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a29bfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="16" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#2d3436">Per-Project Isolated Memory</text>
+  <text x="450" y="65" text-anchor="middle" font-size="14" fill="#636e72">Each project gets its own memory-bank. Switch projects, switch context — instantly.</text>
+
+  <!-- Global Layer at top -->
+  <rect x="250" y="85" width="400" height="45" rx="10" fill="#dfe6e9" stroke="#b2bec3" stroke-width="1.5" filter="url(#shadow2)"/>
+  <text x="450" y="113" text-anchor="middle" font-size="14" font-weight="600" fill="#2d3436">~/.claude/ — Global Config (shared across all projects)</text>
+
+  <!-- Arrows down -->
+  <line x1="200" y1="130" x2="200" y2="170" stroke="#b2bec3" stroke-width="1.5"/>
+  <line x1="450" y1="130" x2="450" y2="170" stroke="#b2bec3" stroke-width="1.5"/>
+  <line x1="700" y1="130" x2="700" y2="170" stroke="#b2bec3" stroke-width="1.5"/>
+
+  <!-- Project 1: API Service -->
+  <rect x="60" y="170" width="260" height="250" rx="12" fill="#ffffff" stroke="#0984e3" stroke-width="2" filter="url(#shadow2)"/>
+  <rect x="60" y="170" width="260" height="38" rx="12" fill="#0984e3"/>
+  <rect x="60" y="195" width="260" height="13" fill="#0984e3"/>
+  <text x="190" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="white">API Service</text>
+
+  <text x="80" y="230" font-size="11" fill="#636e72" font-weight="600">CLAUDE.md</text>
+  <text x="80" y="248" font-size="10" fill="#636e72">  REST endpoints, auth model</text>
+
+  <text x="80" y="270" font-size="11" fill="#636e72" font-weight="600">.mcp.json</text>
+  <text x="80" y="288" font-size="10" fill="#636e72">  code-review-graph + codebase-memory</text>
+
+  <text x="80" y="310" font-size="11" fill="#0984e3" font-weight="600">memory-bank/</text>
+  <rect x="85" y="318" width="220" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="95" y="334" font-size="10" fill="#2d3436">architecture.md — request pipeline</text>
+  <rect x="85" y="344" width="220" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="95" y="360" font-size="10" fill="#2d3436">decisions.md — ADR: auth strategy</text>
+  <rect x="85" y="370" width="220" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="95" y="386" font-size="10" fill="#2d3436">patterns.md — error handling</text>
+  <rect x="85" y="396" width="220" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="95" y="412" font-size="10" fill="#2d3436">troubleshooting.md — rate limits</text>
+
+  <!-- Project 2: Web App -->
+  <rect x="340" y="170" width="220" height="250" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2" filter="url(#shadow2)"/>
+  <rect x="340" y="170" width="220" height="38" rx="12" fill="#6c5ce7"/>
+  <rect x="340" y="195" width="220" height="13" fill="#6c5ce7"/>
+  <text x="450" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="white">Web App</text>
+
+  <text x="355" y="230" font-size="11" fill="#636e72" font-weight="600">CLAUDE.md</text>
+  <text x="355" y="248" font-size="10" fill="#636e72">  React routing, UI state</text>
+
+  <text x="355" y="270" font-size="11" fill="#636e72" font-weight="600">.mcp.json</text>
+  <text x="355" y="288" font-size="10" fill="#636e72">  code-review-graph + ruvector</text>
+
+  <text x="355" y="310" font-size="11" fill="#6c5ce7" font-weight="600">memory-bank/</text>
+  <rect x="360" y="318" width="185" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="370" y="334" font-size="10" fill="#2d3436">architecture.md — component tree</text>
+  <rect x="360" y="344" width="185" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="370" y="360" font-size="10" fill="#2d3436">decisions.md — state management</text>
+  <rect x="360" y="370" width="185" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="370" y="386" font-size="10" fill="#2d3436">patterns.md — data fetching</text>
+  <rect x="360" y="396" width="185" height="22" rx="4" fill="#dfe6e9"/>
+  <text x="370" y="412" font-size="10" fill="#2d3436">troubleshooting.md — build errors</text>
+
+  <!-- Project 3: New Project -->
+  <rect x="580" y="170" width="260" height="250" rx="12" fill="#ffffff" stroke="#00b894" stroke-width="2" stroke-dasharray="6,4" filter="url(#shadow2)"/>
+  <rect x="580" y="170" width="260" height="38" rx="12" fill="#00b894"/>
+  <rect x="580" y="195" width="260" height="13" fill="#00b894"/>
+  <text x="710" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="white">Your Next Project</text>
+
+  <text x="600" y="235" font-size="12" fill="#00b894" font-weight="600">$ claude /init-project my-app</text>
+
+  <text x="600" y="265" font-size="11" fill="#636e72">Creates instantly:</text>
+  <text x="615" y="285" font-size="11" fill="#636e72">  CLAUDE.md</text>
+  <text x="615" y="303" font-size="11" fill="#636e72">  .mcp.json (3 MCP servers)</text>
+  <text x="615" y="321" font-size="11" fill="#636e72">  memory-bank/architecture.md</text>
+  <text x="615" y="339" font-size="11" fill="#636e72">  memory-bank/decisions.md</text>
+  <text x="615" y="357" font-size="11" fill="#636e72">  memory-bank/patterns.md</text>
+  <text x="615" y="375" font-size="11" fill="#636e72">  memory-bank/troubleshooting.md</text>
+
+  <text x="710" y="405" text-anchor="middle" font-size="11" fill="#00b894" font-style="italic">+ auto-indexes codebase</text>
+
+  <!-- Bottom banner -->
+  <rect x="200" y="440" width="500" height="30" rx="15" fill="url(#purpleGrad)" filter="url(#shadow2)"/>
+  <text x="450" y="461" text-anchor="middle" font-size="13" font-weight="600" fill="white">Switch projects = switch memory. No cross-contamination. No re-explaining.</text>
+</svg>
